@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+*{
+    margin:0px;padding:0px;
+}
+
+/*=================================================
+マウスオーバーすると画像を拡大表示／不透明度を変更。
+==================================================*/
+
+.sample_p {
+  width: 150px;
+  height: 132px;
+  /* overflow(要素内から溢れる場合の動作を指定する) */
+  overflow: hidden;
+}
+.sample_p img {
+  width: 150px;
+  /*transitionプロパティの設定*/
+  transition-property: background-color, width, transform, filter;
+  transition-duration: 0.7s;
+  transition-delay: 0.2s;
+  transition-timing-function: cubic-bezier(0, 0, 0, 1);
+}
+
+.sample_p img:hover {
+  /* === transform: 変形 === */
+  /* scale(x,y): スケール(倍率) */
+  /* rotate(xdeg): x度時計回りに回転 */
+  transform: rotate(15deg) scale(1.1,1.1);
+  /* === filter: フィルタ(効果をかける) === */
+  /* grayscale(x%)x％モノクロにする */
+  /* blur(xpx): xpxぼかし */
+  filter: grayscale(100%) blur(5px);
+}
+

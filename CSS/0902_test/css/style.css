@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+h1 {
+    color: red;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    list-style-position: outside;
+}
+
+/* headerへのflexの指示(復習) */
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header ul {
+    display: flex;
+}
+
+header ul li {
+    /* em = 1文字の大きさを基準とした値 */
+    margin: 0 0.5em;
+}
+
+
+/* mainへのflexの指示 */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+main div{
+    width: 33.333%;
+}
+
+main div img {
+    /* 親(この場合はdiv)に対しての100%となる */
+    max-width: 100%;
+}

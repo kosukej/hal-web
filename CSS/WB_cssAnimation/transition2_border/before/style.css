@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+*{
+    margin:0px;padding:0px;
+}
+
+/*=================================================
+マウスオーバーするとリンクやボタンにアニメーションを実行する
+==================================================*/
+
+/*===boxの基本設定===*/
+.box{
+  margin-bottom: 100px;
+}
+
+/*===リストの基本設定===*/
+ul {
+  display: flex;
+  list-style: none;
+}
+li {
+  padding: 5px;
+}
+a {
+  display: block;
+  padding: 0 0 5px;
+  text-decoration: none;
+}
+
+/*===個々のa:after・hoverへの設定===*/
+
+/*--.box1--*/
+
+
+/*--.box2--*/
+
+
+/*--.box3--*/
+
+
+/*--.box4--*/
+button{
+  background:#1AAB8A;
+  color:#fff;
+  border:none;
+  position:relative;
+  height:60px;
+  font-size:1.6em;
+  padding:0 2em;
+  cursor:pointer;
+  /*transitionプロパティの設定*/
+  
+}
+
+

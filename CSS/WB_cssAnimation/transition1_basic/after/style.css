@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+*{
+    margin:0px;
+    padding:10px;
+    background-color: #e0e0e0;
+}
+
+/*=============================================
+マウスオーバーすると背景色と文字色を0.7秒かけて変える例。
+この例では、transition プロパティには、アニメーションの
+継続時間（0.7s）のみを指定します。
+background が「lightblue」から「darkblue」に0.7秒かけて変化。
+color が「darkblue」から「white」に0.7秒かけて変化
+==============================================*/
+
+
+/* 初期状態の CSS の設定を記述 */
+.sample01 {
+    border-radius: 40px;
+    background: #e0e0e0;
+    box-shadow:  30px 30px 59px #bebebe, -30px -30px 59px #ffffff;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;  /* アニメーション対象の初期設定の値 */
+    color: darkblue;  /* アニメーション対象の初期設定の値 */
+    /* transition プロパティの指定 */
+    transition-property: all;
+    transition-duration: 1s;
+    transition-delay: 0s;
+    transition-timing-function: cubic-bezier(0, 0, 0, 1);
+  }
+   
+  /* アニメーション最終状態（到達点）の CSS の設定を記述 */
+  .sample01:hover {
+    border-radius: 40px;
+    background: #e0e0e0;
+    box-shadow: inset 30px 30px 59px #bebebe, inset -30px -30px 59px #ffffff;
+    color: rgb(0, 0, 0); /*アニメーションの変化値*/
+  }

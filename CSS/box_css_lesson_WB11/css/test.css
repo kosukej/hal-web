@@ -1,0 +1,17 @@
+@charset "utf-8";
+/*==========
+■ BOXに関わるスタイル
+・width（BOXの幅）
+・padding（BOX内の余白）
+・margin（BOX同士の間隔）
+・text-align（BOX内の行揃え）
+・background-color（BOX内の背景色）
+・background-image（BOX内の背景画像）
+・border（BOXの罫線（border））
+■ 文字関連のスタイル
+・color（文字の色）
+・font-size（文字の大きさ）
+・font-family（文字の種類）
+・line-height（文字の行間設定）
+・letter-spacing（文字同士の間隔）
+==========*/

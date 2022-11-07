@@ -1,0 +1,51 @@
+﻿@charset "utf-8";
+
+/* html（ページ全体）にgooglefonts（Noto）を指定 */
+html{
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+header{
+    background-color: #5ababa;
+    height: 100vh; /*vh: viewport height (画面の高さ)*/
+    width: 100vw; /*vw: viewport width (画面の横幅)*/
+    /*header内のh1を画面中央に　(display:flex)*/
+    display: flex;
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    border: 2px solid white;
+}
+
+header h1{
+    background-color: azure;
+    padding: 1em;
+    font-size: 3em;
+    opacity: 0.7;
+}
+
+header h1 span{
+    display: block;
+}
+
+header h1 .headerSpa2 {
+    font-size: 0.3em;
+    opacity: 0.2;
+}
+
+video{
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    min-height: 100%;
+    min-width: 100%;
+    opacity: 0.7;
+}
+
+/*headerエリアへのスタイル*/
+/*======================
+＜考え方＞
+１）headerのBOXサイズを画面サイズに合わせる
+２）headerにdisplay:flexを設定し、h1を画面の真ん中にレイアウト
+３）position:relativeを設定し、videoの配置を指定できる様にする
+=======================*/

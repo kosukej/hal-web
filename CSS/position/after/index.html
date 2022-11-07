@@ -1,0 +1,261 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ポジションプロパティを理解しよう</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css">
+<link href="css/design.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<div id="wrapper">
+  <div id="contents"> 
+    <!--**************************************************************--> 
+    <!--***************** ポジションプロパティの説明 *****************--> 
+    <!--**************************************************************-->
+    <h1>position（ポジション）プロパティを理解しよう！</h1>
+    <p>「position」プロパティは、フロートと同じくボックスの配置方法を指定するプロパティです。値は<em>「static」</em><em>「relative</em><em>」「absolute</em><em>」「fixed</em>」の４種類が存在します。positionプロパティで配置方法を設定しておき、top、right、bottom、left プロパティでボックスの配置位置を指定します。</p>
+    <table summary="プロパティの値を紹介する表。">
+      <thead>
+        <tr class="trColor">
+          <th>プロパティ名</th>
+          <th>値</th>
+          <th>説明</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td rowspan="4" class="tdCenter"><em>position</em></td>
+          <td class="tdCenter"><em>static</em></td>
+          <td>通常の位置に配置 （初期値）</td>
+        </tr>
+        <tr>
+          <td class="tdCenter"><em>relative</em></td>
+          <td>通常の位置を基準とした相対的な配置</td>
+        </tr>
+        <tr>
+          <td class="tdCenter"><em>absolute</em></td>
+          <td>ウィンドウまたは親ボックスを基準とした絶対的な配置</td>
+        </tr>
+        <tr>
+          <td class="tdCenter"><em>fixed</em></td>
+          <td>ウィンドウを基準とした絶対的な配置 + 位置の固定</td>
+        </tr>
+      </tbody>
+    </table>
+    
+    <!--******************************************************************--> 
+    <!--************************** staticの説明 **************************--> 
+    <!--******************************************************************-->
+    <h2><em>static<span class="h2Yomi">（スタティック）</span></em> … 通常フロー（通常の位置）に配置</h2>
+    <p>通常フローとは、本来配置されるはずの位置のことです。それぞれのボックスは通常の位置に配置されます。これがデフォルトの状態です。 </p>
+    <h3 class="htmlStyle">HTML</h3>
+    <div class="code">
+      <pre><code>
+&lt;div id=&quot;box1&quot;&gt;BOX1&lt;/div&gt;
+&lt;div id=&quot;box2&quot;&gt;BOX2&lt;/div&gt;
+&lt;div id=&quot;box3&quot;&gt;BOX3&lt;/div&gt;
+      </code></pre>
+    </div>
+    <h3 class="cssStyle">CSS</h3>
+    <div class="code">
+      <pre><code>
+#box1 {
+   background-color: #6CC;
+   height: 100px;
+   width: 200px;
+}
+
+#box2 {
+   background-color: #F6C;
+   height: 100px;
+   width: 200px;
+   position: static;
+}
+
+#box3 {
+   background-color: #3F6;
+   height: 100px;
+   width: 200px;
+}
+      </code></pre>
+    </div>
+    <p><a href="static.html" target="_blank">サンプル画面へ</a></p>
+    
+    <!--****************************************************************--> 
+    <!--************************ relativeの説明 ************************--> 
+    <!--****************************************************************-->
+    <h2><em>relative<span class="h2Yomi">（リラティブ）</span></em> … 通常の位置を基準とした相対的な配置（相対位置決め）</h2>
+    <p>本来配置されるはずの位置を基準にして、配置位置を指定する方法です。</p>
+    <h3 class="htmlStyle">HTML</h3>
+    <div class="code">
+      <pre><code>
+&lt;div id=&quot;box1&quot;&gt;BOX1&lt;/div&gt;
+&lt;div id=&quot;box2&quot;&gt;BOX2&lt;/div&gt;
+&lt;div id=&quot;box3&quot;&gt;BOX3&lt;/div&gt;
+    </code></pre>
+    </div>
+    <h3 class="cssStyle">CSS</h3>
+    <div class="code">
+      <pre><code>
+#box1 {
+   background-color: #6CC;
+   height: 100px;
+   width: 200px;
+}
+
+#box2 {
+   background-color: #F6C;
+   height: 100px;
+   width: 200px;
+   position: relative;
+   left: 100px; /*---左から100px移動---*/
+}
+
+#box3 {
+   background-color: #3F6;
+   height: 100px;
+   width: 200px;
+   position: relative;
+   left: 200px; /*---左から200px移動---*/
+}
+      </code></pre>
+    </div>
+    <p><a href="relative.html" target="_blank">サンプル画面へ</a></p>
+    
+    <!--****************************************************************--> 
+    <!--************************ absoluteの説明 ************************--> 
+    <!--****************************************************************-->
+    <h2><em>absolute<span class="h2Yomi">（アブソリュート）</span></em> … ウィンドウまたは親ボックスを基準とした絶対的な配置 （絶対位置決め）</h2>
+    <p>祖先要素に位置決めされた要素がある場合は、その要素の位置を基準にします。それ以外の場合は、ウィンドウの枠を基準とした配置になります。</p>
+    <p>※位置決めされた要素とは、<em>positionプロパティ</em>で <em>static</em> 以外の値が指定された要素のことです。</p>
+    <h3 class="htmlStyle">HTML</h3>
+    <div class="code">
+      <pre><code>
+&lt;div id=&quot;box1&quot;&gt;BOX1&lt;/div&gt;
+&lt;div id=&quot;box2&quot;&gt;BOX2&lt;/div&gt;
+&lt;div id=&quot;box3&quot;&gt;BOX3&lt;/div&gt;
+    </code></pre>
+    </div>
+    <h3 class="cssStyle">CSS</h3>
+    <div class="code">
+      <pre><code>
+body {
+   height: 1000px; /*---ウィンドウサイズを高さ1000pxに指定---*/
+}
+
+#box1 {
+   background-color: #6CC;
+   height: 100px;
+   width: 200px;
+}
+
+#box2 {
+   background-color: #F6C;
+   height: 100px;
+   width: 200px;
+   position: absolute;
+   left: 100px; /*---左から100px移動---*/
+   top: 50px; /*---上から50px移動---*/
+}
+
+#box3 {
+   background-color: #3F6;
+   height: 100px;
+   width: 200px;
+}
+      </code></pre>
+    </div>
+    <p><a href="absolute.html" target="_blank">サンプル画面へ</a></p>
+    <p><a href="absolute2.html" target="_blank">サンプル画面へ（応用編）</a></p>
+    
+    <!--*************************************************************************--> 
+    <!--****************************** fixedの説明 ******************************--> 
+    <!--*************************************************************************-->
+    <h2><em>fixed<span class="h2Yomi">（フィックスド）</span></em> … ウィンドウを基準とした絶対的な配置 + 位置の固定 （絶対位置決め）</h2>
+    <p>ウィンドウの枠を基準とした配置になります。配置位置は固定されるので、スクロールしてもその位置に表示されたままになります。</p>
+    <p>※<em>fixed</em> の指定は、IE 6以下では対応していません。IE 7からは対応していますが、表示モードが「互換モード」の場合は機能しないようです。</p>
+    <h3 class="htmlStyle">HTML</h3>
+    <div class="code">
+      <pre><code>
+&lt;div id=&quot;box1&quot;&gt;BOX1&lt;/div&gt;
+&lt;div id=&quot;box2&quot;&gt;BOX2&lt;/div&gt;
+&lt;div id=&quot;box3&quot;&gt;BOX3&lt;/div&gt;
+     </code></pre>
+    </div>
+    <h3 class="cssStyle">CSS</h3>
+    <div class="code">
+      <pre><code>
+body {
+   height: 1000px;
+}
+
+#box1 {
+   background-color: #6CC;
+   height: 100px;
+   width: 200px;
+}
+
+#box2 {
+   background-color: #F6C;
+   height: 100px;
+   width: 200px;
+   position: fixed;
+   left: 100px; /*---左から100px移動---*/
+   top: 50px; /*---上から50px移動---*/
+}
+
+#box3 {
+   background-color: #3F6;
+   height: 100px;
+   width: 200px;
+}
+      </code></pre>
+    </div>
+    <p><a href="fixed.html" target="_blank">サンプル画面へ</a></p>
+    
+    <!--***************************************************************--> 
+    <!--************************ z-indexの説明 ************************--> 
+    <!--***************************************************************-->
+    <h2><em>重なり順は z-index で指定できる</em></h2>
+    <p><em>z-index</em>は、positionで重なったBOXの重なり順（上下関係）を変更できる。しかし、<em>「position:static」以外を指定した要素にしか指定できない。</em>つまり <em>z-index</em>を使用する要素には、positionプロパティーで、<em>relative</em>、<em>absolute</em>、<em>fixed</em> のいずれかを指定する必要があります！</p>
+    <p>※z-indexを記述しなくても、position プロパティーで<em>relative</em>か<em>absolute</em>、<em>fixed</em>を指定した要素には、<em>「z-index: auto」</em> が自動的に指定されます。</p>
+    <h3 class="htmlStyle">HTML</h3>
+    <div class="code">
+      <pre><code>
+&lt;div id=&quot;box1&quot;&gt;BOX1&lt;/div&gt;
+&lt;div id=&quot;box2&quot;&gt;BOX2&lt;/div&gt;
+&lt;div id=&quot;box3&quot;&gt;BOX3&lt;/div&gt;
+     </code></pre>
+    </div>
+    <h3 class="cssStyle">CSS</h3>
+    <div class="code">
+      <pre>
+      <code> #box1 {
+      background-color: #6CC;
+      height: 100px;
+      width: 200px;
+      }
+      
+      #box2 {
+      background-color: #F6C;
+      height: 100px;
+      width: 200px;
+      position: absolute;
+      left: 100px;
+      top: 50px;
+      z-index: -1; /*--真ん中へ移動---*/
+      }
+      
+      #box3 {
+      background-color: #3F6;
+      height: 100px;
+      width: 200px;
+      z-index: -2; /*---一番下へ移動---*/
+      position: relative;
+      } </code> </div>
+    <p><a href="zindex.html" target="_blank">サンプル画面へ</a></p>
+  </div>
+</div>
+</body>
+</html>

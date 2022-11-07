@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+*{
+    margin:0px;padding:0px;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+/*=================================================
+自動的にanimationBoxが一定時間でfadeoutする。
+==================================================*/
+
+.animationBox{
+  width: 100%;
+  height: 100%;
+  /*h2の中央寄せ*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*ポジショニングで.baseに重ねる*/
+  position: absolute;
+  top:0;
+  left:0;
+  background-color: orange;
+  /* animation: fadeOut 0.5s ease 2s 1 normal; */
+  animation-duration: 2s;/* アニメーション時間 */
+  animation-delay : 2s;/* 変化開始の時間 */
+  animation-name: fadeOut;/* アニメーション名 */
+  animation-iteration-count: 1;/* アニメーションの繰り返し（無限）*/
+  animation-fill-mode: forwards; /*これで値を保持*/
+}
+@keyframes fadeOut { /*animetion-nameで設定した値を書く*/
+  0% {
+    opacity: 1;
+  } /*アニメーション開始時は不透明度0%*/
+  100% {
+    opacity: 0;
+  } /*アニメーション終了時は不透明度100%*/
+}
+
+.base{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

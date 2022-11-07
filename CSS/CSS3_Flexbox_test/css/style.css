@@ -1,0 +1,74 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*初期化*/
+*{
+	margin:0px;
+	padding:0px;
+}
+li{
+	list-style-type: none;
+	list-style-position: outside;
+}
+img{
+	vertical-align: bottom;/*画像のベースラインを下にする*/
+}
+a{
+	text-decoration:none;/*aの下線を非表示にする*/
+}
+
+#header {
+	display: flex;
+	justify-content: space-between;
+}
+
+ul {
+	display: flex;
+}
+
+li {
+	margin: 2em 0.5em;
+}
+
+#navi li {
+	border-left: 1px solid rgb(47, 47, 47);
+	padding: 0 1em;
+}
+
+#contents {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+#contents .item {
+	box-sizing: border-box;
+	width: calc(50% - 4px);
+	padding: 1em;
+	border: 1px solid #ccc;
+	margin: 2px;
+	text-align: center;
+}
+
+.order {
+	padding: 0.5em 40%;
+	color: white;
+	text-decoration: none;
+	text-align: center;
+	background-color: rgb(241, 43, 43);
+}
+
+#footnavi ul{
+	display: flex;
+	flex-wrap: wrap;
+}
+#wrapper{
+	width: 960px;/*ページサイズ960px*/
+	margin:0 auto;/*センター揃え配置*/
+}
+
+#contents img{
+	max-width:100%;/*画像の横幅の最大値を親要素に合わせる*/
+}
+
+/*以下、レイアウトを完成させてください！*/
+/*左右間・上下間のmarginは完成イメージを参照の上、大体でOKです*/

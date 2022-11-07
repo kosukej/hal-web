@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*初期化*/
+*{
+	margin:0px;
+	padding:0px;
+}
+li{
+	list-style-type: none;
+	list-style-position: outside;
+}
+img{
+	vertical-align: bottom;
+}
+
+/*wrapperへのスタイリング*/
+
+
+/*contentsへのスタイリング*/
+
+
+
+/*これよりflexbox*/
+/*header関連*/
+
+
+/*contents関連*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

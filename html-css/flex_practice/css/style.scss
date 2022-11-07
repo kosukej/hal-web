@@ -1,0 +1,85 @@
+/* 
+フォント情報
+
+■見出しレベル1、文章
+font-family: 'Roboto Serif', serif;
+
+■見出しレベル2
+font-family: 'Roboto Mono', monospace;
+*/
+
+
+// 初期設定
+*{
+    margin: 0;
+    padding: 0;
+}
+
+img{
+    max-width: 100%;
+}
+
+li{
+    list-style: none;
+}
+
+
+
+// ここから下にコーディング
+
+
+
+h1 {
+    font-family: 'Roboto Serif', serif;
+    color: #6363636f;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto Mono', monospace;
+    color: #6363636f;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.double_column_box {
+    display: flex;
+    margin-bottom: 50px;
+}
+
+.double_column {
+    width: 50%;
+    margin: 10px;
+}
+
+.single_column {
+    margin: 10px;
+    margin-bottom: 100px;
+}
+
+.logos {
+    display: flex;
+    margin: 10px;
+    margin-bottom: 50px;
+    .logo {
+        width: 25%;
+    }
+}
+
+.navigation {
+    display: flex;
+    margin: 10px;
+    margin: 0 auto;
+}
+
+footer {
+    margin: 20px;
+    text-align: center;
+}
+
+
+

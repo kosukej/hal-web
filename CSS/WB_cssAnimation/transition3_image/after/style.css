@@ -1,0 +1,25 @@
+@charset "utf-8";
+
+*{
+    margin:0px;padding:0px;
+}
+
+/*=================================================
+マウスオーバーすると画像を拡大表示／不透明度を変更。
+==================================================*/
+
+
+.sample_p {
+  width: 150px;
+  height: 132px;
+  overflow: hidden;
+}
+.sample_p img {
+  opacity: 0.7;
+  width: 150px;
+  transition: all 0.5s;
+}
+.sample_p img:hover {
+  opacity: 1.0;
+  transform: scale(1.1, 1.1);
+}
