@@ -9,3 +9,81 @@ html{
 }
 
 /* ここから記述 */
+
+main {
+
+    #split {
+        width: 100%;
+        height: 100vh;
+        display: flex;
+
+        .left {
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            .heading {
+
+                h1 {
+                    font-size: 8rem;
+                    margin-left: 10%;
+                    margin-bottom: 50px;
+                    line-height: 120%;
+                    font-weight: 700;
+                    letter-spacing: 5px;
+                }
+
+                span {
+                    display: block;
+                }
+
+                p {
+                    font-size: 1.8rem;
+                    width: 70%;
+                    margin-left: 10%;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+
+
+        .right {
+            width: 50%;
+            height: 100vh;
+            background-image: url(../img/image_leaf.jpg);
+            background-size: cover;
+            overflow: scroll;
+
+            .container {
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .read {
+                    border-radius: 30px;
+                    width: 70%;
+                    box-sizing: border-box;
+                    padding: 30px;
+                    background-color: rgba($color: #fff, $alpha: 0.3);
+                    backdrop-filter: blur(20px);
+                    box-shadow: 3px 3px 10px rgba($color: #000, $alpha: 0.3), -3px -3px 10px rgba($color: #fff, $alpha: 0.1);
+                    // alpha = 背景の不透明度
+
+                    h2 {
+                        color: #fff;
+                        font-size: 4rem;
+                        margin-bottom: 20px;
+                        border-bottom: 20px rgba(206, 255, 29, 0.8) solid;
+                        line-height: 0.4;
+                        width: fit-content;
+                        text-shadow: 2px 2px 5px rgba($color: #000, $alpha: 0.6);
+                    }
+
+                    p {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+    }
+}
