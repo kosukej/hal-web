@@ -1,0 +1,51 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+// ここから記述
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.block_01 {
+    display: flex;
+    justify-content: flex-end;
+
+    .container {
+        width: 80%;
+        height: 70vh;
+
+        .row_01 {
+            display: flex;
+
+            .col_01 {
+                align-self: center;
+                width: calc(40%);
+                z-index: 1;
+
+                h1 {
+                    font-size: 8rem;
+                    color: rgb(146, 146, 146);
+                }
+            }
+
+            .col_02 {
+                width: calc(60%);
+                margin-left: -500px;
+            }
+        }
+    }
+}

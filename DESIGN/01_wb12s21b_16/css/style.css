@@ -1,0 +1,148 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Cormorant Garamond", serif;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+/* グリット表示 */
+.grid {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 6000px;
+  width: 100%;
+}
+
+/* ここから記述 */
+h3 {
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+p {
+  padding: 50px;
+  margin: 0 auto;
+  width: 60%;
+  font-size: 2rem;
+}
+
+header {
+  background-image: url(../img/image-1.jpg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header h1 {
+  font-size: 10rem;
+}
+
+main {
+  width: 100%;
+}
+main #contents_1 {
+  display: flex;
+  flex-wrap: wrap;
+}
+main #contents_1 .item_1 {
+  width: 33.3333333333%;
+  height: 50vh;
+  text-align: center;
+  justify-content: center;
+  margin: auto;
+}
+main #contents_1 .item_1 h3 {
+  padding-top: 100px;
+}
+main #contents_1 .backImages_1 {
+  margin: 0;
+  background-image: url(/img/image-2.jpg);
+  background-size: cover;
+}
+main #contents_1 .backImages_2 {
+  margin: 0;
+  background-image: url(/img/image-3.jpg);
+  background-size: cover;
+}
+main #contents_1 .backImages_3 {
+  margin: 0;
+  background-image: url(/img/image-4.jpg);
+  background-size: cover;
+}
+main #contents_2 {
+  margin: 150px auto;
+}
+main #contents_2 h2 {
+  text-align: center;
+  font-size: 6rem;
+}
+main #contents_2 #container {
+  display: flex;
+  justify-content: space-around;
+}
+main #contents_2 #container .item_2 {
+  width: 20%;
+}
+main #contents_2 #container .item_2 h3 {
+  margin: 100px 0;
+}
+main #contents_2 #container .item_2 p {
+  text-align: center;
+  font-size: 2rem;
+  margin-top: 20px;
+}
+main #contents_3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+main #contents_3 .item_3 {
+  width: 50%;
+  height: 90vh;
+  text-align: center;
+}
+main #contents_3 .item_3 h3 {
+  padding-top: 300px;
+}
+main #contents_3 .backImages_4 {
+  margin: 0;
+  background-image: url(/img/image-8.jpg);
+  background-size: cover;
+}
+main #contents_3 .backImages_5 {
+  margin: 0;
+  background-image: url(/img/image-9.jpg);
+  background-size: cover;
+}
+main #contents_4 {
+  display: flex;
+  justify-content: space-around;
+  margin: 200px 0 100px 0;
+}
+main #contents_4 .item_4 {
+  text-align: center;
+  width: 33%;
+}
+main #contents_4 .item_4 p {
+  width: 70%;
+}
+
+footer {
+  background-color: rgb(214, 214, 214);
+  text-align: center;
+  padding: 80px;
+}
+footer small {
+  font-size: 2rem;
+}/*# sourceMappingURL=style.css.map */

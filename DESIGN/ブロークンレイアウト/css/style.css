@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+section {
+  width: 100%;
+  height: 100vh;
+}
+
+.block_01 {
+  display: flex;
+  justify-content: flex-end;
+}
+.block_01 .container {
+  width: 80%;
+  height: 70vh;
+}
+.block_01 .container .row_01 {
+  display: flex;
+}
+.block_01 .container .row_01 .col_01 {
+  align-self: center;
+  width: 40%;
+  z-index: 1;
+}
+.block_01 .container .row_01 .col_01 h1 {
+  font-size: 8rem;
+  color: rgb(146, 146, 146);
+}
+.block_01 .container .row_01 .col_02 {
+  width: 60%;
+  margin-left: -500px;
+}/*# sourceMappingURL=style.css.map */
